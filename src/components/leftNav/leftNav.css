@@ -1,6 +1,4 @@
-.left{
-  border: 2px dotted red;
-}
+
 @keyframes swing {
   0% {
     transform: rotate(0deg);
