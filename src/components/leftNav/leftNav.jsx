@@ -46,7 +46,7 @@ export default function leftNav() {
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- sidebar-content  --> */}
+                        {/* <!-- left sidebar-content  --> */}
                         <div className="sidebar-footer">
                         <a href="#">
                             <i className="fa fa-bell"></i>
