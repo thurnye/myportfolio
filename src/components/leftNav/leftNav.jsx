@@ -15,7 +15,7 @@ export default function leftNav() {
     
     return (
         <React.Fragment>
-            {/* <section className="left"> */}
+            <section className="left">
                 <div className="page-wrapper chiller-theme toggled">
                     <button id="show-sidebar" className="btn btn-sm btn-dark"  onClick={() => showSideBar()}>
                         <i className="fa fa-power-off"></i>
@@ -67,7 +67,7 @@ export default function leftNav() {
                     </nav>
  
                 </div>
-            {/* </section> */}
+            </section>
         </React.Fragment>
     )
 }
