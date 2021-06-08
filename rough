@@ -1,0 +1,42 @@
+ {/* <div className="about-me component">
+               <div className="image">
+                   <img src={Me} alt="" srcset=""/>
+               </div>
+                   <p className="available">
+                   </p>
+                       <p className="open"> Open for new position</p>
+               <h5>Tamunotonye Daniel</h5>
+               <h5><small className="text-muted">Software Developer</small></h5>
+           </div> */}
+           /* .image img{
+    width: 36vw;
+    border-radius: 50%;
+}
+.available {
+    background: #ffc007;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    animation: beat 1s ease infinite;
+    border: 10px solid #efefef7a;
+    margin-top: -33px;
+    margin-left: 58%;
+    margin-bottom: 33px;
+}
+@keyframes beat {
+    0% {
+      transform:scale(1);
+    }
+    5% {
+      transform:scale(1.25);
+    }
+   
+    50% {
+      transform:scale(1);
+    }
+    
+    100% {
+      transform:scale(1);
+    }
+  }
+   */
