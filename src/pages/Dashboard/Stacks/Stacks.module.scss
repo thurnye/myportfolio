@@ -1,0 +1,42 @@
+.Stacks {
+  color: white;
+  background: #20212a;
+  
+}
+
+.coding{
+    height: 330px;
+    margin: 0 20px;
+    // margin-top: 10px;
+  }
+   .coding .lang{
+    margin-top: -5px;
+    display: flex;
+      flex-direction: column;
+      height: 50px;
+  }
+  .iconContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+.coding .lang .skill{
+    font-size: 22px;
+    color:#ffc107;
+    width: 75px;
+  }
+ .skillName{
+    font-size: 10px;
+  }
+
+
+  @media (max-width: 380px) { 
+    .Stacks {
+      height: 40%;
+      overflow: auto;
+      
+    }
+    
+  }

@@ -1,0 +1,53 @@
+.Dashboard { 
+    background-color: rgb(30, 30, 40);
+
+.hamburger{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.hamburger:first-child {
+    margin-left: 10px;
+    margin-top: 55px;
+}
+
+
+.ShowNavStats{
+    display: none;
+}
+
+@media (min-width: 600px) and (max-width: 856px){
+    .Ellipse{
+        display: block;
+        text-align: end;
+    }
+    .ShowNavStats{
+        display: none;
+    }
+}
+@media (min-width: 600px){
+    .hamburger{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    
+}
+
+@media (min-width: 857px){
+    .ShowNavStats{
+        display: block;
+    }
+    
+    
+}
+}
+hr {
+    margin-top: 15px;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background: #8c8c8e;
+    width: 255px;
+}
+

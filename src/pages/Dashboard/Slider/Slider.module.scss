@@ -1,0 +1,111 @@
+.Slider {
+    // background: #efefef;
+    background: linear-gradient(159deg,rgba(37,37,50,.98) 0%,rgba(35,35,45,.98) 100%) !important;
+	color: #fff
+}
+
+
+@mixin vertical-align($position) {
+    position:$position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  @mixin all-transition($time)
+  {
+      transition: all $time;
+      -webkit-transition: all $time;
+  }
+  body
+  {
+      margin: 0;
+    font-family: 'Muli', sans-serif;
+  }
+  .menu {
+  
+      font-weight: 100;
+    //   background: #efefef;
+    background: linear-gradient(159deg,rgba(37,37,50,.98) 0%,rgba(35,35,45,.98) 100%) !important;
+	color: #fff;
+      width: 150px;
+      height: 100%;
+      padding-left: 50px;
+      position: fixed;
+      z-index: 100;
+      -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
+      box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
+      right: -130px;
+      @include all-transition(0.3s);
+    //   color: #222;
+  
+      &:hover, &:focus
+      {
+          transform: translate3d(-130px, 0, 0);
+          animation-timing-function: 1s ease-in;
+      }
+    
+    // .showNav + {
+    //     transform: translate3d(-130px, 0, 0);
+    //     // animation-timing-function: 1s ease-in;
+         
+    // }
+      .menuContent{
+        position: relative;
+        left: -50px;
+        top: -6px;
+        width: 100vw;
+        height: 50px;
+        background:#454569
+      }
+      .title
+      {
+          top:50%;
+          @include vertical-align(absolute);
+          transform: rotate(270deg);
+          left: 10px;
+          font-weight: 800;
+          font-size: 15px;
+  
+      }
+      .nav
+      {
+          @include vertical-align(absolute);
+      font-weight: 100;
+  
+          li
+          {
+            padding-bottom: 30px;
+            list-style-type: none;
+
+            a
+            {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                @include all-transition(0.3s);
+
+                &:hover
+                {
+                    color: #aaa;
+                }
+            }
+        }
+      }
+  }
+  
+  @media (max-width: 600px) { 
+   .menu{
+    padding-left: 5px;
+    .menuContent{
+        left: -5px;
+      }
+    .title
+      {
+        left: -9px;
+  
+   }
+}
+    
+  }
