@@ -16,6 +16,24 @@
     display: none;
 }
 
+.mainComponent{
+    background: linear-gradient(180deg, rgba(108,97,97,0.8) 1%, rgba(30,30,40,0.9123456) 100%,  ), url('../../public/images/bg.jpeg');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height: 150px;
+    // opacity: 0.3;
+}
+
+.homeComponent{
+    height: calc(100vh - 65px);
+    width: 100vw;
+    opacity: 1;
+    z-index: 99999;
+    overflow: auto;
+}
+
 @media (min-width: 600px) and (max-width: 856px){
     .Ellipse{
         display: block;

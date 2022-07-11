@@ -1,1 +1,22 @@
-.Home {}
+.Home {
+    opacity: 2;
+    color: white;
+    margin-top: 30px;
+    // border: 2px solid red;
+    margin-left: -16px;
+
+}
+.banner{
+    content: '';
+    // position: absolute;
+    z-index: 0;
+    top: 30px;
+    width: 90%;
+    height: 30px;
+    margin-left: -2%;
+    -webkit-box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+    box-shadow: 0 3px 8px 0rgba(15,15,20,.2);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: rgba(30,30,40,.88);
+}

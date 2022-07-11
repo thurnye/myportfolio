@@ -37,6 +37,7 @@
       -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
       box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
       right: -130px;
+      z-index: 99999999;
       @include all-transition(0.3s);
     //   color: #222;
   
@@ -54,7 +55,7 @@
       .menuContent{
         position: relative;
         left: -50px;
-        top: -6px;
+        top: 1px;
         width: 100vw;
         height: 50px;
         background:#454569
@@ -67,6 +68,7 @@
           left: 10px;
           font-weight: 800;
           font-size: 15px;
+          color: #959595
   
       }
       .nav

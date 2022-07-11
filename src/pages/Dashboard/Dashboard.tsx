@@ -181,10 +181,10 @@ const Dashboard: FC<DashboardProps> = (props:DashboardProps) => {
           >
           </Menu>
           {/* <Carousel/> */}
-          <Box sx={{display: 'flex', mr: {sm: 11, xs: 5}, ml: 2, background: 'red'}}> 
+          <Box sx={{display: 'flex',  background: 'red'}} className={styles.mainComponent}> 
             
             {/* Home */}
-            <Box sx={{display: value === 0 ? 'block': 'none', p: 2}}><Home/></Box>
+            <Box sx={{display: value === 0 ? 'block': 'none', p: 2}} className={styles.homeComponent}><Home/></Box>
 
             {/* Profile */}
             <Box sx={{display: value === 1 ? 'block': 'none', p: 2}}><PortFolio/></Box>
