@@ -1,0 +1,13 @@
+@import '../../../../ColorTheme/color.scss';
+
+.Residence {
+    .myResidence{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .location{
+        color: $folio-color-corePrimary
+    }
+    
+}

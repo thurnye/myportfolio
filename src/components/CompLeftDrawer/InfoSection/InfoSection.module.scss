@@ -1,0 +1,31 @@
+@import '../../../ColorTheme/color.scss';
+.InfoSection {
+  background: $folio-color-backgroundSecondary;
+  width: 350px;
+  height: inherit;
+  z-index: 99999999;
+  display: flex;
+  flex-direction: column;
+  .stackContentsContainer{
+    flex-grow: 1;
+    overflow: auto;
+  }
+    .footer{
+        display: none
+    }
+  }
+  
+  @media (min-width: 600.01px) { 
+    .InfoSection {
+      .stackContentsContainer{
+        margin-bottom: 45px;
+      }
+      .footer{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 98%
+      }
+    }
+    
+  }

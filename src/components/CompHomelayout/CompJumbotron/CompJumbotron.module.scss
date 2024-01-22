@@ -1,0 +1,100 @@
+@import '../../../ColorTheme/color.scss';
+
+.CompJumbotron {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-image: url("../../../public/images/bg.jpeg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 400px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    .jumbotronComponent1{
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 39px;
+        width: 85%;
+        height: 25px;
+        margin-left: 5%;
+        box-shadow: rgba(15, 15, 20, 0.2) 0px 3px 8px 0px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background: rgba(30, 30, 40, 0.88);
+    }
+    .jumbotronComponent3{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 60px;
+        height: 280px;
+        background-image: linear-gradient(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%);
+        color: #cccccc;
+        .jumbotronContentContainer{
+            display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            .jumbotronHead{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-weight: 900;
+                margin-bottom: 1rem;
+                color: white;
+            }
+            .contactNow {
+                background-color: $folio-color-main;
+                border: none;
+                margin-top: 1.35rem;
+                font-weight: 700;
+                padding: 0.7rem;
+                border-radius: 3px;
+                a{
+                    text-decoration: none;
+                    color: $folio-color-coreTertiary;
+                }
+            }
+            button:focus{
+                outline: none;
+            }
+        }
+        .imageContainer{
+            border: 2px dotted red;
+            // text-align: end;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}   
+
+// MOBILE
+@media (max-width: 1033px) { 
+    .CompJumbotron {
+        margin-top: 2rem;
+        .jumbotronComponent1{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1200px) { 
+    .CompJumbotron {
+        margin-top: 2rem;
+        .jumbotronComponent1{
+            display: none;
+        }
+        .imageContainer{
+            display: none;
+        }
+    }
+}
+@media (max-width: 600px) { 
+    .CompJumbotron {
+        margin-top: 1rem;
+        .jumbotronComponent1{
+            display: none;
+        }
+    }
+}

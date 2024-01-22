@@ -1,0 +1,24 @@
+@import '../../ColorTheme/color.scss';
+
+.CompEdgedNavigation {
+    .drawerComp{
+        border: 2px dotted red;
+        // background-color: $folio-color-backgroundSecondary;
+    }
+    .drawerHeader{
+        background-color: $folio-color-backgroundSub;
+        color: $folio-color-corePrimary
+
+    }
+    .hamburgerMenu{
+        color: $folio-color-corePrimary
+    }
+    .transformNav{
+        transform: rotate(90deg);
+        margin-top: 3rem;
+        strong{
+            font-size: 17px;
+            color: $folio-color-corePrimary
+        }
+    }
+}

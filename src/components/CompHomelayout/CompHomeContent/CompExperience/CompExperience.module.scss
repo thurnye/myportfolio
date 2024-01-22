@@ -1,0 +1,22 @@
+@import '../../../../ColorTheme/color.scss';
+
+.CompExperience {
+    margin-bottom: 2rem;
+    
+    .expItems{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+       .suffix{
+        color: $folio-color-main;
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .expDesc{
+        margin-left: 15px;
+        color: $folio-color-coreSecondary;
+        width: 100px;
+       } 
+    }
+}

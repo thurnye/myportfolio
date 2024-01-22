@@ -1,0 +1,32 @@
+@import './ColorTheme/color.scss';
+body {
+  background-color: $folio-color-backgroundPrimary;
+  color: $folio-color-corePrimary;
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+.App{
+}
+
+.owl-theme .owl-dots {
+  text-align: start !important;
+  span{
+    width: 9px !important;
+    height: 4px !important;
+    background-color: $folio-color-backgroundComplimentary !important;
+    margin-top: 2rem !important;
+  }
+  .active span{
+    background-color: $folio-color-main !important;
+    width: 35px !important;
+  }
+}
+
+.owl-theme .owl-nav{
+  text-align: end !important;
+  font-size: 26px;
+  position: absolute;
+  right: 0;
+  bottom: -11px;
+}

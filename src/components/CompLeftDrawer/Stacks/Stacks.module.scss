@@ -1,0 +1,19 @@
+@import '../../../ColorTheme/color.scss';
+
+.Stacks {
+  padding: 2rem 1rem;
+  color: $folio-color-coreSecondary;
+  background: $folio-color-backgroundSecondary;
+
+  // overflow: auto;
+}
+
+
+
+@media (max-width: 380px) { 
+  .Stacks {
+    height: calc(100vh - 380px);
+    // overflow: auto;
+  }
+  
+}

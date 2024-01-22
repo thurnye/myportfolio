@@ -1,0 +1,47 @@
+@import '../../../../ColorTheme/color.scss';
+
+.CompRecommendations {
+    margin-top: 2.3rem;
+    .recommendationHeader{
+        color: $folio-color-coreSecondary;
+        margin-bottom: 2.3rem;
+    }
+    .cardItem{
+        padding: 1rem 1rem 0.5rem 1rem;
+        background-color: $folio-color-backgroundComplimentary;
+        .cardHead{
+            display: flex;
+            flex-direction: column;
+            color: $folio-color-coreSecondary;
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            span:last-child{
+                font-size: 13px;
+                font-style: italic;
+                color: $folio-color-corePrimary;
+            }
+        }
+        .cardBody{
+            color: $folio-color-corePrimary;
+        }
+        .cardRedirect{
+            color: $folio-color-main;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 13px;
+            width: 135px;
+            border-radius: 30px;
+            background-color: $folio-color-backgroundPrimary;
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+

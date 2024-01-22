@@ -1,0 +1,25 @@
+@import '../../../ColorTheme/color.scss';
+
+
+.CompNavContents {
+    flex-grow: 1;
+    background-color: $folio-color-backgroundSecondary;
+    color: $folio-color-corePrimary;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .container{
+        width: 100%;
+    }
+    a{
+        color: $folio-color-corePrimary;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .active a{
+        color: $folio-color-coreSecondary
+    }
+    .navigationContainer{
+        padding: 1.2rem;
+    }
+}

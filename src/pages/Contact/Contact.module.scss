@@ -1,0 +1,37 @@
+@import '../../ColorTheme/color.scss';
+
+.Contact {
+    margin-top: 1rem;
+    .contactInfo{
+        margin-bottom: 1.5rem;
+        color: white;
+    }
+    .cardItemContainer{
+        padding: 3rem auto;
+        background-color: $folio-color-backgroundComplimentaryContact;
+        .contentContents{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            &:first-child{
+                padding-top: 1.5rem;
+            }
+            p{
+                color: $folio-color-corePrimary;
+                font-size: 14px;
+            }
+            .cardNameTitle{
+                color: white;
+                
+            }
+        }
+    }
+
+    .getInTouch{
+        margin-top: 3rem;
+        .contactInfo{
+            margin-bottom: 3rem
+        }
+    }
+}

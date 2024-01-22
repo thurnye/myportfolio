@@ -1,0 +1,17 @@
+@import '../../ColorTheme/color.scss';
+
+.CompMobileNavBar {
+    display: none;
+    .NavBar {
+        background-color: $folio-color-backgroundTertiary !important;
+        .profileName a{
+            color: $folio-color-main !important;
+        }
+    }
+}
+
+@media (max-width: 1032px) { 
+    .CompMobileNavBar{
+        display: block;
+    }
+}

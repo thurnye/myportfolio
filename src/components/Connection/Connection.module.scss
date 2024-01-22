@@ -1,0 +1,33 @@
+@import '../../ColorTheme/color.scss';
+
+.Connection {
+    width: 100%;
+    bottom: 64px;
+    display: flex;
+    color: $folio-color-corePrimary;
+    justify-content: center;
+    align-items: center;
+
+    
+    a {
+      flex-grow: 1;
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      position: relative;
+      color: $folio-color-corePrimary;
+    }
+    
+     a .notification {
+      position: absolute;
+      top: 0;
+    }
+}
+
+@media (max-width: 600px) { 
+  .Footer {
+      bottom: 55px;
+    
+  }
+  
+}

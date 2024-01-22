@@ -1,0 +1,56 @@
+@import '../../ColorTheme/color.scss' ;
+.Portfolio {
+    margin-top: 1rem;
+    
+    // border: 2px dotted white;
+    .title{
+        color: $folio-color-coreSecondary;
+        p{
+            font-weight: 700
+        }
+    }
+    .portfolioHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .portfolioLinkContainer{
+            display: flex;
+            .portfolioLinkItem{
+                margin-right: 2rem;
+                font-size: 0.85rem;
+            }
+            .portfolioActiveTab{
+                border-bottom: 1px solid $folio-color-main;
+            }
+        }
+        .mobilePFItem{
+            display: none;
+        }
+        .mobilePFItemName {
+            display: flex
+         }
+    }
+    .menuSectionLabel {
+        display: block;
+        padding: 10px 0 5px 10px;
+        font-size: 0.75em;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        color: blue
+    }
+}
+
+@media (max-width: 710px) { 
+    .portfolioLinkContainer,
+    .mobilePFItemName {
+       display: none !important
+    }
+    .mobilePFItem{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../../../ColorTheme/color.scss';
+
+
+.CompBrands {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    .brandContainer{
+        text-align: center;
+        img{
+            width: 150px;
+            margin: auto;
+            color: $folio-color-corePrimary;
+        }
+    }
+}

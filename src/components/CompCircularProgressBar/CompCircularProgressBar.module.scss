@@ -1,0 +1,21 @@
+@import '../../ColorTheme/color.scss';
+
+.CompCircularProgressBar {
+    color: $folio-color-coreSecondary;
+    font-weight: 400;
+    .skillSetContainer{
+        width: 65px !important;
+        height: 65px !important;
+        color: $folio-color-main;
+    }
+    .skillSetContainerText{
+        width: 65px !important;
+        font-size: 25px;
+    }
+    span{
+        color: $folio-color-main;
+        font-weight: 700;
+        font-size: 22px;
+        margin-right: 5px;
+    }
+}

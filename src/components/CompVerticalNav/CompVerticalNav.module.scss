@@ -1,0 +1,43 @@
+@import '../../ColorTheme/color.scss';
+
+.CompVerticalNav {
+    width: 70px;
+    overflow: hidden;
+    right: 40;
+    background-color: $folio-color-backgroundSecondary;
+    height: inherit;
+    .navContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: inherit;
+        .verCompHeader{
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: $folio-color-backgroundTertiary;
+            .vNavHeader{
+                margin-left: 1rem;
+            }
+        }
+        .activeNavHeader{
+            margin-top: 10rem;
+            transform: rotateZ(90deg);
+            margin-left: -1rem;
+            font-weight: bolder;
+            opacity: 1;
+            transition: opacity 0.4s ease-in-out;
+        }
+        .navContentContainer{
+            flex-grow: 1;
+            display: inherit;
+            align-items: center;
+            background-color: $folio-color-backgroundSecondary;
+        }
+          .fadeOut {
+            opacity: 0;
+          }
+          
+    }
+}

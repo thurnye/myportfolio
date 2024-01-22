@@ -1,0 +1,10 @@
+@import '../../ColorTheme/color.scss';
+
+.CompCode {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: white;
+    .code{
+        color: $folio-color-main
+    }
+}

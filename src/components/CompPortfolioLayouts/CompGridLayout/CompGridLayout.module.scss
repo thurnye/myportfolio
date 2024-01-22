@@ -1,0 +1,22 @@
+@import '../../../ColorTheme/color.scss';
+
+.CompGridLayout {
+    .GridCardContainer{
+        // border: 2px dotted white
+        .contentContainer{
+            background-color: transparent;
+        }
+        .gridCardContents{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $folio-color-corePrimary;
+            span{
+                margin-left: 10px;
+                a{
+                    color: $folio-color-main
+                }
+            }
+        }
+    }
+}

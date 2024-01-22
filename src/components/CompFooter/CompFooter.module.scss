@@ -1,0 +1,15 @@
+@import '../../ColorTheme/color.scss';
+
+.CompFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $folio-color-backgroundComplimentary;
+    .footerContainer{
+    }
+    a{
+        color: $folio-color-corePrimary;
+        text-decoration: none;
+    }
+}
