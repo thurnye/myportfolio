@@ -15,11 +15,9 @@ const Info = () => {
   return(
     <Box className={styles.Info} sx={{height: '100%'}}>
       <Box sx={{
-        // height: 250, 
         position: 'fixed',
         width: menuWidth,
-        // border: '2px dotted blue'
-        // background: alt
+        background: '#20202A'
         }}>
           <About/>
       </Box>
@@ -36,8 +34,7 @@ const Info = () => {
         width: '100%',
         height: 40,
         display: 'flex',
-
-        // background: alt
+        background: '#20202A'
       }}>
         <Connection/>
       </Box>

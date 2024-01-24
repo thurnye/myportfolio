@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import NavMenu from './NavMenu';
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 const drawerWidth = 150;
@@ -74,7 +75,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function MenuDrawer({openMiniMobile, setOpenMiniMobile}) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const sub =theme.palette.background.sub;
 
 
   return (
@@ -83,8 +83,12 @@ export default function MenuDrawer({openMiniMobile, setOpenMiniMobile}) {
         {/* mobile Screens */}
         <Drawer  variant="permanent" open={openMiniMobile} sx={{
           display: { xs: 'flex', md: 'none' },
+          '& .MuiDrawer-paper':{
+            background: '#20202A',
+            color: '#8c8c8e'
+          },
           
-          }} anchor='right' background={sub}>
+          }} anchor='right'>
           <DrawerHeader>
             <IconButton onClick={() => setOpenMiniMobile(!openMiniMobile)}>
               {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
@@ -102,14 +106,22 @@ export default function MenuDrawer({openMiniMobile, setOpenMiniMobile}) {
         anchor='right' 
         sx={{display: { xs: 'none', md: 'block' },
         '& .MuiDrawer-paper':{
-          // mr: 1
-        }
+          background: '#20202A',
+          color: '#8c8c8e',
+          boxShadow: '-3px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
+        },
         }}
-        background={sub}
       >
-        <DrawerHeader>
-          <IconButton onClick={() => setOpen(!open)}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+        <DrawerHeader sx={{
+          background: '#252530'
+        }}>
+          <IconButton onClick={() => setOpen(!open)} sx={{
+            color: '#8c8c8e',
+            '&:hover':{
+              color: 'white'
+            }
+            }}>
+            {open ? <ChevronRightIcon /> : <MenuIcon />}
           </IconButton>
         </DrawerHeader>
         <Divider />

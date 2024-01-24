@@ -1,13 +1,13 @@
 @import './ColorTheme/color.scss';
-body {
+html, body, .App {
   background-color: $folio-color-backgroundPrimary;
   color: $folio-color-corePrimary;
 }
 ::-webkit-scrollbar {
   width: 0.5em;
 }
-.App{
-}
+// .App{
+// }
 
 .owl-theme .owl-dots {
   text-align: start !important;

@@ -101,7 +101,7 @@ function Dashboard() {
             '& .MuiDrawer-paper': { 
                 boxSizing: 'border-box', 
                 width: drawerWidth,
-                backgroundColor: sub
+                backgroundColor: '#20202A'
                 
             },
           }}
@@ -114,12 +114,14 @@ function Dashboard() {
           variant="permanent"
           sx={{
             display: { xs: 'none', md: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', 
+            '& .MuiDrawer-paper': { 
+            boxSizing: 'border-box', 
             width: drawerWidth, 
             position: 'absolute', 
-            backgroundColor: sub,
+            background: '#20202A',
             border: 'none',
-            ml:1  
+            ml:1,
+            boxShadow: '2px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)'  
           },
           }}
           open

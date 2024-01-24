@@ -19,27 +19,8 @@ library.add(fab, far, fas)
 
 
 function App() {
-  // const [activeNav, setActiveNav] = React.useState<string>('HOME');
-  // const [openRightNav, setOpenRightNav] = React.useState<boolean>(false);
 
   return (
-    // <AppContext.Provider value={{activeNav, setActiveNav, openRightNav, setOpenRightNav}}>
-    //   <div className="App">
-    //     <Box>
-    //       <Box sx={{
-    //             position: 'relative',
-    //             maxHeight: 1440,
-    //             maxWidth: 1440,
-    //             margin: 'auto',
-    //             height: '97vh',
-    //         }}>
-    //         {/* <CompSiteLayout/> */}
-    //         <Dashboard/>
-    //       </Box>
-
-    //     </Box>
-    //   </div>
-    // </AppContext.Provider>
     <div className="App">
       <BrowserRouter>
           <CssBaseline/>
