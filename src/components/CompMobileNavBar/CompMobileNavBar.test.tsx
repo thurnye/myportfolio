@@ -5,7 +5,7 @@ import CompMobileNavBar from './CompMobileNavBar';
 
 describe('<CompMobileNavBar />', () => {
   test('it should mount', () => {
-    render(<CompMobileNavBar />);
+    render(<CompMobileNavBar handleDrawer={() => ''} openMenu={() => ''} />);
     
     const compMobileNavBar = screen.getByTestId('CompMobileNavBar');
 

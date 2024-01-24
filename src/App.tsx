@@ -7,7 +7,6 @@ import {fas} from '@fortawesome/free-solid-svg-icons'
 import './App.scss';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppContext } from './Context/context';
-import CompSiteLayout from './components/CompSiteLayout/CompSiteLayout';
 import { Box } from '@mui/material';
 import Dashboard from './components/CompSiteLayout/Dashboard';
 import Contact from './pages/Contact/Contact';
@@ -34,7 +33,6 @@ function App() {
                     margin: 'auto',
                     height: '97vh',
                 }}>
-                {/* <CompSiteLayout/> */}
                 <Dashboard/>
               </Box>
     

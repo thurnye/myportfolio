@@ -8,13 +8,12 @@ import {MoreVertical, Menu} from 'react-feather'
 import CompFeatherIcon from '../CompFeatherIcon/CompFeatherIcon';
 import styles from './CompMobileNavBar.module.scss';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Drawer } from '@mui/material';
-import CompLeftDrawer from '../CompLeftDrawer/CompLeftDrawer';
-import CompRightDrawer from '../CompRightDrawer/CompRightDrawer';
-import { ManageContext } from '../../Context/context';
 
 
-interface CompMobileNavBarProps {}
+interface CompMobileNavBarProps {
+  openMenu: any
+  handleDrawer: any
+}
 
 export type Anchor = 'left' | 'right' | undefined;
 export interface DrawerType{
@@ -23,20 +22,13 @@ export interface DrawerType{
 };
 
 
-const CompMobileNavBar: FC<CompMobileNavBarProps> = () =>{
+const CompMobileNavBar: FC<CompMobileNavBarProps> = ({handleDrawer, openMenu}) =>{
 
-  const [drawerState, setDrawerState] = React.useState<DrawerType>({
-    open: false,
-    anchor: undefined
-  });
-
-  const toggleDrawer = (anchor: Anchor, open: boolean) => {
-    setDrawerState({ ...drawerState, open: open , anchor: anchor});
-  };
+  
+  
   
   return(
-    <ManageContext.Provider value={{setDrawerState, drawerState}}>
-      <div className={styles.CompMobileNavBar} data-testid="CompMobileNavBar">
+      <Box className={styles.CompMobileNavBar} data-testid="CompMobileNavBar">
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static" className={styles.NavBar}>
             <Toolbar>
@@ -46,8 +38,8 @@ const CompMobileNavBar: FC<CompMobileNavBarProps> = () =>{
                 color="inherit"
                 aria-label="menu"
                 sx={{ mr: 2 }}
-                onClick={() => toggleDrawer('left', true)}
-              >
+                onClick={handleDrawer}
+                >
                 
                 <CompFeatherIcon size={18} icon={<MoreVertical/>}/>
               </IconButton>
@@ -84,32 +76,14 @@ const CompMobileNavBar: FC<CompMobileNavBarProps> = () =>{
                 color="inherit"
                 aria-label="menu"
                 sx={{ mr: 2 }}
-                onClick={() => toggleDrawer('right', true)}
+                onClick={openMenu}
               >
                 <CompFeatherIcon size={18} icon={<Menu/>}/>
               </IconButton>
             </Toolbar>
           </AppBar>
         </Box>
-
-        {/* Drawer */}
-        <Drawer
-          anchor={drawerState.anchor}
-          open={drawerState.open}
-          onClose={()=>toggleDrawer(drawerState.anchor, false)}
-          sx={{
-            flexShrink: 0,
-            [`& .MuiDrawer-paper`]: { 
-              boxSizing: 'border-box',
-              background: '#1E1E28'
-            },
-          }}
-        >
-          {drawerState.anchor === 'left' && <CompLeftDrawer />}
-          {drawerState.anchor === 'right' && <CompRightDrawer onClose={()=>toggleDrawer(drawerState.anchor, false)}/>}
-        </Drawer>
-      </div>
-    </ManageContext.Provider>
+      </Box>
   )
 };
 

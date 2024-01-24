@@ -24,7 +24,8 @@ const CompJumbotron: FC<CompJumbotronProps> = () => {
         <Box className={styles.CompJumbotron} data-testid="CompJumbotron" >
           <Box className={styles.jumbotronComponent1} sx={{display: {xs: 'none', sm: 'block'}}}></Box>
           <div className={styles.jumbotronComponent2}></div>
-          <Box className={styles.jumbotronComponent3}>
+          <Box className={styles.jumbotronComponent3}
+          >
             <Box className={styles.jumbotronContentContainer}
               sx={{
                 display: 'flex',
@@ -48,7 +49,7 @@ const CompJumbotron: FC<CompJumbotronProps> = () => {
               </Box>
               <Typography variant="h4" component="div" gutterBottom className={styles.jumbotronHead}
               sx={{
-                
+                fontSize: {xs:'1.9rem', sm: '2rem' }
               }}> 
                 Discover my Amazing Art Space!
               </Typography>

@@ -4,15 +4,12 @@ import styles from './Dashboard.module.scss';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import MenuDrawer from './MenuDrawer'
 import { useTheme } from "@mui/material";
 import Info from './Info/Info'
 import CompFooter from '../CompFooter/CompFooter';
+import CompMobileNavBar from '../CompMobileNavBar/CompMobileNavBar';
 
 const drawerWidth = 300;
 
@@ -46,38 +43,19 @@ function Dashboard() {
     <Box  sx={{display : 'flex', mt: 2}}>
       <CssBaseline />
       <Box  sx={{
-          display:{xs: 'flex', md: 'none'},
+          display:{xs: 'block', md: 'none'},
           width: '100%',
-          justifyContent: 'space-between',
-          alignItems: 'center',
           position:'fixed',
           top:0,
-        //   backgroundColor: sub,
-            backgroundColor: 'grey',
+            backgroundColor: '#20202A',
           maxHeight: 53,
-          p:2,
           zIndex: 9999
         }}>
-            <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ p: 2, display: { md: 'none' } }}
-          >
-            <MoreVertIcon />
-          </IconButton>
-
-            <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={() => setOpenMiniMobile(!openMiniMobile)}
-            sx={{ p: 2, display: { md: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <CompMobileNavBar handleDrawer={handleDrawerToggle} openMenu={() => setOpenMiniMobile(!openMiniMobile)} /> 
       </Box>
+      <Box>
+      </Box>
+
       <Box
         component="nav"
         sx={{ 
