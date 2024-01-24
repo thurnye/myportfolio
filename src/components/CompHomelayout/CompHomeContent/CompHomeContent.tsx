@@ -4,7 +4,7 @@ import CompServices from './CompServices/CompServices';
 import CompRecommendations from './CompRecommendations/CompRecommendations';
 import CompExperience from './CompExperience/CompExperience';
 import CompBrands from './CompBrands/CompBrands';
-// import CompFooter from '../../CompFooter/CompFooter';
+import CompFooter from '../../CompFooter/CompFooter';
 
 interface CompHomeContentProps {}
 

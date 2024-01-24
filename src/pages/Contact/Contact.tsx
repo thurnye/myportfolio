@@ -7,53 +7,50 @@ import CompContactForm from '../../components/CompContactForm/CompContactForm';
 // import CompFooter from '../../components/CompFooter/CompFooter'
 
 interface ContactProps {}
-
-const Contact: FC<ContactProps> = () => {
-  const contactCard = [
-    {
-      name: 'Location',
-      data: [
-        {
-          name: 'Country',
-          value: 'Canada'
-        },
-        {
-          name: 'City',
-          value: 'Toronto'
-      }
-    ]
-    },
-    {
-      name: 'Socials',
-      data: [
-        {
-          name: 'Email',
-          value: 'danthurnye@gmail.com'
-        },
-        {
-          name: 'LinkedIn',
-          value: 'linkedIn.com'
-        }
-      ]
-    },
-    {
-      name: 'Telephone',
-      data: [
-        {
-          name: 'Support',
-          value: 'danthurnye@gmail.com'
-        },
-        {
-          name: 'Phone',
-          value: '+1(416)-843-6683'
-        }
-      ]
+const contactCard = [
+  {
+    name: 'Location',
+    data: [
+      {
+        name: 'Country',
+        value: 'Canada'
+      },
+      {
+        name: 'City',
+        value: 'Toronto'
     }
   ]
+  },
+  {
+    name: 'Socials',
+    data: [
+      {
+        name: 'Email',
+        value: 'danthurnye@gmail.com'
+      },
+      {
+        name: 'LinkedIn',
+        value: 'linkedIn.com'
+      }
+    ]
+  },
+  {
+    name: 'Telephone',
+    data: [
+      {
+        name: 'Support',
+        value: 'danthurnye@gmail.com'
+      },
+      {
+        name: 'Phone',
+        value: '+1(416)-843-6683'
+      }
+    ]
+  }
+]
 
+const Contact: FC<ContactProps> = () => {
 
-
-  
   return(
     <div className={styles.Contact} data-testid="Contact">
       <Typography variant='h6' color="text.secondary" gutterBottom className={styles.contactInfo}>

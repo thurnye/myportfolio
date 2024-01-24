@@ -2,33 +2,4 @@
 
 
 .CompServices {
-    .servicesHeader{
-        color: $folio-color-coreSecondary;
-        margin-bottom: 2.3rem;
-    }
-    .cardComponent{
-        .cardItem{
-            padding: 1rem 1rem 0.5rem 1rem;
-            background-color: $folio-color-backgroundComplimentary;
-            .cardHead{
-                color: $folio-color-coreSecondary;
-                font-size: 16px;
-                font-weight: 800;
-            }
-            .cardBody{
-                color: $folio-color-corePrimary;
-            }
-            .cardRedirect{
-                color: $folio-color-main;
-                padding: 0 0.5rem;
-                display: flex;
-                align-items: center;
-                font-weight: 600;
-                font-size: 14px;
-                span{
-                    margin-right: 5px;
-                }
-            }
-        }
-    }
 }

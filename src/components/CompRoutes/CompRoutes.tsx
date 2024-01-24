@@ -10,12 +10,12 @@ interface CompRoutesProps {}
 
 const CompRoutes: FC<CompRoutesProps> = () => (
   <div className={styles.CompRoutes} data-testid="CompRoutes">
-    <Routes>
+    {/* <Routes>
             <Route path="*" element={<NoMatch />} />
             <Route path="/"  element={<Home/>}/>
             <Route path="/portfolio"  element={<Portfolio/>}/>
             <Route path="/contact"  element={<Contact/>}/>
-          </Routes>
+          </Routes> */}
   </div>
 );
 

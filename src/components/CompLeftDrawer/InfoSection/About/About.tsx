@@ -5,6 +5,7 @@ import {MoreVertical} from 'react-feather'
 import photo from '../../../../public/images/me.jpeg'
 import Connection from '../../../Connection/Connection';
 import { useManageContext } from '../../../../Context/context';
+import Box from '@mui/material/Box';
 
 interface AboutProps {}
 
@@ -15,10 +16,7 @@ const About: FC<AboutProps> = () => {
   return(
   <div className={styles.About} data-testid="About">
       <div>
-        <div className={styles.closeIconContainer}>
-          <CompFeatherIcon size={18} icon={<MoreVertical/>} onClick={() => setDrawerState({ ...drawerState, open: false, anchor: drawerState?.anchor})}/>
-        </div>
-        <div>
+        <Box sx={{pt: 4}}>
           <div className={styles.avatarContainer}>
             <img src={photo} alt="Daniel TAMUNOTONYE" />
           </div>
@@ -26,7 +24,7 @@ const About: FC<AboutProps> = () => {
             <div  className ={styles.lamp}></div>
             <span className={styles.availability}>Available for work</span>
           </div> */}
-        </div>
+        </Box>
       </div>
 
       <div className={styles.name_job}>

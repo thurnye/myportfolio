@@ -2,11 +2,20 @@
 
 
 .CompSiteLayout {
-    background-image: url("../../public/images/bg.jpeg"); 
-    // height: 500px; 
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
+    // height: 99vh;
+    position: relative;
+    max-height: 1440px;
+        height: 97vh;
+    // width: 90vw;
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    background-image: url("../../public/images/bg.jpeg"); /* The image used */
+    // background-color: $folio-color-backgroundPrimary !important; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
     border: 2px dotted white;
     
     .DesktopView{
@@ -23,12 +32,12 @@
             height: 'inherit'
         }
         .container{
-            // border: 2px dotted green;
+            border: 2px dotted green;
             margin-left: 90px;
             display: flex;
             justify-content: space-between;
             align-items: initial;
-            // width: 500px;
+            width: 500px;
             // height: 96vh;
             overflow: auto;
             position: relative;
@@ -37,7 +46,7 @@
     .contextContainer{
         // max-width: 96%;
         // height: 96vh;
-        // height: 'inherit';
+        height: 'inherit';
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -46,7 +55,7 @@
     }
 
     .contextNavContainer{
-        // right: 35px;
+        right: 35px;
         // position: fixed;
         border: 2px dotted red;
         // height: 96vh;

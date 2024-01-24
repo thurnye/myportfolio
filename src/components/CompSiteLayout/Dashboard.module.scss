@@ -1,0 +1,26 @@
+@import '../../ColorTheme/color.scss';
+
+.mainContainer{
+    background-image: url("../../public/images/bg.jpeg"); 
+    height: 100%; 
+    background-position: start;
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    .contentContainer{
+        background-image: linear-gradient(180deg,rgba(30,30,40,.93) 0%,rgba(30,30,40,.96) 70%,rgba(30,30,40,.99) 80%,#1e1e28 100%);
+        & .MuiDrawer-paper{
+            background: $folio-color-backgroundPrimary !important;
+        }
+    }
+}
+
+.mainContainer {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.mainContainer::-webkit-scrollbar {
+    display: none;
+    }
