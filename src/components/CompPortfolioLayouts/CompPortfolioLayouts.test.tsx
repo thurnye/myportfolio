@@ -5,7 +5,7 @@ import CompPortfolioLayouts from './CompPortfolioLayouts';
 
 describe('<CompPortfolioLayouts />', () => {
   test('it should mount', () => {
-    render(<CompPortfolioLayouts layout={''} />);
+    render(<CompPortfolioLayouts layout={''}/>);
     
     const compPortfolioLayouts = screen.getByTestId('CompPortfolioLayouts');
 

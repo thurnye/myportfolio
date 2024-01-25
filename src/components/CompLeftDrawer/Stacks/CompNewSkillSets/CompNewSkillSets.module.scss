@@ -2,23 +2,5 @@
     .inProgressSkill{
         padding-bottom: 20px;
     }
-    .newSkillContainer{
-        display: Flex;
-        justify-content: center;
-        align-items: center;
-        .progression{
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-right: 1.5rem;
-            font-size: 15px;
-            .skillName{
-                // width: 50px;
-            }
-            
-        }
-
-    }
+   
 }

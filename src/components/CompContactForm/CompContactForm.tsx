@@ -6,7 +6,8 @@ import {useForm, SubmitHandler} from 'react-hook-form';
 import { Button, Box, FormControl, Typography, TextField } from '@mui/material';
 import { AtSign, Mail, User } from 'react-feather';
 import { styled } from '@material-ui/core/styles';
-
+import { useTranslation } from "react-i18next";
+import { useDataCustomHook } from '../../Data/data';
 import CompFeatherIcon from '../CompFeatherIcon/CompFeatherIcon';
 
 interface CompContactFormProps {}
@@ -50,14 +51,15 @@ const CustomTextField = styled(TextField)({
 });
 
 const CompContactForm: FC<CompContactFormProps> = () => {
-  
+  const {t} = useTranslation();
+  const {contactPage: {fields}} = useDataCustomHook();
 
   const createFormValidationSchema = useMemo(
     () => yup.object({
-        name: yup.string().required('name is required'),
-        email: yup.string().email().required('email is required'),
-        message: yup.string().required('message is required'),
-    }).required(), []
+        name: yup.string().required(fields.isNameRequired),
+        email: yup.string().email().required(fields.isEmailRequired),
+        message: yup.string().required(fields.isMessageRequired),
+    }).required(), [fields]
   );
 
   const {
@@ -93,7 +95,7 @@ const CompContactForm: FC<CompContactFormProps> = () => {
               id="outlined-basic" 
               aria-invalid={errors.name ? true : false}
               {...register('name')}
-                placeholder="Name"
+                placeholder={fields.name}
                 sx={{flexGrow: 1, height: '52px', borderRadius: 0}}
                 />
             </Box>
@@ -112,7 +114,7 @@ const CompContactForm: FC<CompContactFormProps> = () => {
               id="outlined-basic" 
               aria-invalid={errors.email ? true : false}
               {...register('email')}
-                placeholder="Email"
+                placeholder={fields.email}
                 sx={{flexGrow: 1, height: '52px', borderRadius: 0}}
               />
             </Box>
@@ -132,7 +134,7 @@ const CompContactForm: FC<CompContactFormProps> = () => {
                 autoComplete='off'
                 id="outlined-basic" 
                 aria-invalid={errors.message ? true : false}
-                placeholder="Message"
+                placeholder={fields.message}
                 sx={{flexGrow: 1, color: 'white'}}
                 multiline
                 rows={10}
@@ -147,7 +149,7 @@ const CompContactForm: FC<CompContactFormProps> = () => {
             <Button
             type="submit"
             onClick={handleSubmit(onSubmit)}
-            >Send Message</Button>
+            >{fields.buttonText}</Button>
            </Box>
         </FormControl>
       </form>

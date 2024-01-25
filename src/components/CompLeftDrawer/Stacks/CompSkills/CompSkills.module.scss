@@ -1,36 +1,3 @@
-@import '../../../../ColorTheme/color.scss';
-
 .CompSkills {
-    .coding{
-        .stackContainer{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .iconContainer{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-            padding-top: 20px;
-            width: 390px;
-            margin: auto;
-            .lang{
-              margin-top: -5px;
-              display: flex;
-              flex-direction: column;
-              height: 50px;
-              text-align: center;
-              .skill{
-                font-size: 22px;
-                color: $folio-color-main;
-                width: 75px;
-              }
-              .skillName{
-                  font-size: 10px;
-              }
-            }
-          }
-        }
-        
-      }
+    
 }

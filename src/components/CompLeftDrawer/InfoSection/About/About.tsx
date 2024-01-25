@@ -2,23 +2,21 @@ import React, { FC } from 'react';
 import styles from './About.module.scss';
 import CompFeatherIcon from '../../../CompFeatherIcon/CompFeatherIcon';
 import {MoreVertical} from 'react-feather'
-import photo from '../../../../public/images/me.jpeg'
 import Connection from '../../../Connection/Connection';
-import { useManageContext } from '../../../../Context/context';
 import Box from '@mui/material/Box';
+import { useDataCustomHook } from '../../../../Data/data';
 
 interface AboutProps {}
 
 const About: FC<AboutProps> = () => {
-  const {drawerState, setDrawerState} = useManageContext();
-  
+  const {sidebar: {name, avatar, profession}} = useDataCustomHook();
 
   return(
   <div className={styles.About} data-testid="About">
       <div>
         <Box sx={{pt: 4}}>
           <div className={styles.avatarContainer}>
-            <img src={photo} alt="Daniel TAMUNOTONYE" />
+            <img src={avatar} alt="Daniel TAMUNOTONYE" />
           </div>
           {/* <div className={styles.lampContainer}>
             <div  className ={styles.lamp}></div>
@@ -28,9 +26,9 @@ const About: FC<AboutProps> = () => {
       </div>
 
       <div className={styles.name_job}>
-        <h5>DANIEL TAMUNOTONYE</h5>
-        <p>Full-Stack Developer</p>
-        <p>Ui/Ux Developer</p>
+        <h5>{name}</h5>
+        {profession.map((el) => <p key={el}>{el}</p>)}
+        
       </div>
       <div className={styles.socialConnection}>
         <Connection/>

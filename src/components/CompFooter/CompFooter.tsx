@@ -1,10 +1,14 @@
 import React, { FC } from 'react';
 import Typography from '@mui/material/Typography';
 import styles from './CompFooter.module.scss';
+import { useDataCustomHook } from '../../Data/data';
 
 interface CompFooterProps {}
 
-const CompFooter: FC<CompFooterProps> = () => (
+const CompFooter: FC<CompFooterProps> = () => {
+  const {footer: {reserve, email}} = useDataCustomHook();
+  
+  return(
   <div className={styles.CompFooter} data-testid="CompFooter">
     <div className={styles.footerContainer}>
       <Typography
@@ -13,7 +17,8 @@ const CompFooter: FC<CompFooterProps> = () => (
         fontSize={14}
         className={styles.recommendationHeader}
         >
-        &copy; {new Date().getFullYear()} All Rights Reserved.
+          &copy; {reserve}
+        {/* &copy; {new Date().getFullYear()} All Rights Reserved. */}
         </Typography> 
     </div>
     <div className={styles.footerContainer}>
@@ -23,10 +28,10 @@ const CompFooter: FC<CompFooterProps> = () => (
         fontSize={14}
         className={styles.recommendationHeader}
         >
-        Email: <a href="mailto:danthurnye@gmail.com" target='_blank'>danthurnye@gmail.com</a>
+        {email.type}: <a href={email.link} target='_blank'>{email.email}</a>
         </Typography> 
     </div>
   </div>
-);
+)};
 
 export default CompFooter;

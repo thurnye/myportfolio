@@ -11,13 +11,16 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import styles from './CompRecommendations.module.scss';
+import { useDataCustomHook } from '../../../../Data/data';
+import { useTranslation } from "react-i18next";
 
 
 interface CompRecommendationsProps {}
 
 
 const CompRecommendations: FC<CompRecommendationsProps> = () => {
-
+  const {t} = useTranslation();
+  const {homePage: {recommendations}} = useDataCustomHook();
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -31,31 +34,6 @@ const CompRecommendations: FC<CompRecommendationsProps> = () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
-  
-  const recommendations = [
-    {
-      name: 'Paul Trueman',
-      avatar: '',
-      profession: 'Software Developer',
-      notes: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione nisi eaque vel similique laboriosam! Voluptas, tempore assumenda fugit nihil, aut dignissimos quod nostrum nulla velit veritatis dolorum. Animi, asperiores vitae maxime mollitia, repellendus beatae in a ut quasi .',
-      stars: 5
-    },
-    {
-      name: 'Paul Trueman',
-      avatar: '',
-      profession: 'Software Developer',
-      notes: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione nisi eaque vel similique laboriosam! Voluptas, tempore assumenda fugit nihil, aut dignissimos quod nostrum nulla velit veritatis dolorum. Animi, asperiores vitae maxime mollitia, repellendus beatae in a ut quasi .',
-      stars: 5
-    },
-    {
-      name: 'Paul Trueman',
-      avatar: '',
-      profession: 'Software Developer',
-      notes: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione nisi eaque vel similique laboriosam! Voluptas, tempore assumenda fugit nihil, aut dignissimos quod nostrum nulla velit veritatis dolorum. Animi, asperiores vitae maxime mollitia, repellendus beatae in a ut quasi .',
-      stars: 5
-    },
-  ];
-
 
   return (
     <div className={styles.CompRecommendations} data-testid="CompRecommendations">
@@ -65,7 +43,7 @@ const CompRecommendations: FC<CompRecommendationsProps> = () => {
       fontSize={18}
       className={styles.recommendationHeader}
       >
-      <strong>Recommendations</strong>
+      <strong>{t('recommendations')}</strong>
       </Typography> 
       
       <OwlCarousel items={viewportWidth > 750 ? 2: 1} className="owl-theme" loop nav margin={8} > 

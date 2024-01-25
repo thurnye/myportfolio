@@ -3,8 +3,8 @@ import styles from './CompJumbotron.module.scss';
 import { Box, CardMedia, Typography } from '@mui/material';
 import CompCode from '../../CompCode/CompCode';
 import { Link } from 'react-router-dom';
-import avatar from '../../../public/images/bitMoji/mainAvatar.png'
-
+// import avatar from '../../../public/images/bitMoji/mainAvatar.png'
+import { useDataCustomHook } from '../../../Data/data';
 
 
 
@@ -12,13 +12,9 @@ import avatar from '../../../public/images/bitMoji/mainAvatar.png'
 interface CompJumbotronProps {}
 
 const CompJumbotron: FC<CompJumbotronProps> = () => {
-  const typed: string[] = [
-    "Hello Wor- No...",
-    "I like to make websites.",
-    "Also web applications.",
-    "I do other stuff as well.",
-    "... but mostly not relevant."
-  ]
+  const { banner: { header, subHeader, avatar, buttonText } } = useDataCustomHook();
+
+  console.log(avatar)
   return(
       <div className="jumbotron">
         <Box className={styles.CompJumbotron} data-testid="CompJumbotron" >
@@ -51,17 +47,17 @@ const CompJumbotron: FC<CompJumbotronProps> = () => {
               sx={{
                 fontSize: {xs:'1.9rem', sm: '2rem' }
               }}> 
-                Discover my Amazing Art Space!
+                {header}
               </Typography>
               <Box>
                 <Typography variant="body1" component="div" gutterBottom className={styles.cardHead}> 
-                  <CompCode typed={typed} />
+                  <CompCode typed={subHeader} />
                 </Typography>
 
               </Box>
               <div className={styles.contactNow}>
                 
-                <Link to={'/contact'}>Contact Now!</Link>
+                <Link to={'/contact'}>{buttonText}</Link>
               </div>
             </Box>
           </Box>

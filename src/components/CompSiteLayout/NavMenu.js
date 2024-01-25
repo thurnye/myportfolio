@@ -7,51 +7,24 @@ import ListItemText from '@mui/material/ListItemText';
 import Grow from '@mui/material/Grow';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
+import { useTranslation } from "react-i18next";
+import { useDataCustomHook } from '../../Data/data';
 
-const dataNav = [
-  { "id": 0, "title": "Home", "subMenu": false, "path": "home" },
-  {
-    "id": 1,
-    "title": "Projects",
-    "path":"projects",
-    "subMenu": [
-      {
-        "title": "Projects",
-        "subtitle": "2 Columns",
-        "path": "/projects-2-col"
-      },
-      {
-        "title": "Projects",
-        "subtitle": "3 Columns",
-        "path": "/projects-3-col"
-      }
-    ]
-  },
-  { "id": 2, "title": "History", "subMenu": false, "path": "history" },
-  { "id": 3, "title": "About", "subMenu": false, "path": "about" },
-  { "id": 4, "title": "Contact", "subMenu": false, "path": "contact" }
-];
-const translations = [
-  {
-    name: 'english',
-    label:'EN'
-  },
-  {
-    name: 'french',
-    label:'FR'
-  }
-]
+
 
 const NavMenu = ({open, setOpen, isMobile}) => {
+  const { t,i18n } = useTranslation()
   let location = useLocation();
-  const [state, setState] = useState('HOME');
+  const [state, setState] = useState('');
   const [lang, setLang] = useState('EN');
+  const {translations, navs} = useDataCustomHook()
+
 
   useEffect(() => {
     if(location.pathname){
-      setState(location.pathname.substring(1).toUpperCase())
+      setState(t(location.pathname.substring(1)).toUpperCase())
     }
-  }, [location])
+  }, [location, t])
 
   
   return(
@@ -111,14 +84,17 @@ const NavMenu = ({open, setOpen, isMobile}) => {
                       }
                      }} 
                      aria-label="translations"
-                     onClick={() => setLang(el.label)}
+                     onClick={() => {
+                      setLang(el.label);
+                      i18n.changeLanguage(el.label);
+                    }}
                      >
                       {el.label}
                     </Avatar>)}
                   </Box>
                 </Grow>
             </ListItem>
-          {open && dataNav.map((el, index) => (
+          {open && navs.map((el, index) => (
             <Grow
             key={el.path}
             in={open}
