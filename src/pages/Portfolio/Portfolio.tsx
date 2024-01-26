@@ -69,7 +69,13 @@ const Portfolio: FC<PortfolioProps> = () => {
               onClick={() => handleActiveTab(el.label)
               }
               >
-                <Typography sx={{fontSize: 11}}>{el.name}</Typography>
+                <Typography sx={{
+                  fontSize: 11, 
+                  cursor: 'pointer',
+                  '&:hover':{
+                    color: 'white'
+                  }
+                  }}>{el.name}</Typography>
               </div>
             </React.Fragment>
           )}

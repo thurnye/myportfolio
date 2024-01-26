@@ -371,114 +371,199 @@ export const useDataCustomHook = () => {
                 label: 'all'
             },
             projectList: [
-                {
-                  img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-                  title: 'Breakfast',
-                  author: '@bkristastucchio',
-                  featured: true,
+              {
+                // img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+                img: 'https://images.unsplash.com/photo-1627634777217-c864268db30c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'Cartopia',
+                author: '@rollelflex_graphy726',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/Cartopia',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
                 },
-                {
-                  img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-                  title: 'Burger',
-                  author: '@rollelflex_graphy726',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-                  title: 'Camera',
-                  author: '@helloimnik',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-                  title: 'Coffee',
-                  author: '@nolanissac',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-                  title: 'Hats',
-                  author: '@hjrc33',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-                  title: 'Honey',
-                  author: '@arwinneil',
-                  featured: true,
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-                  title: 'Basketball',
-                  author: '@tjdragotta',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-                  title: 'Fern',
-                  author: '@katie_wasserman',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-                  title: 'Mushrooms',
-                  author: '@silverdalex',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-                  title: 'Tomato basil',
-                  author: '@shelleypauls',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-                  title: 'Sea star',
-                  author: '@peterlaster',
-                },
-                {
-                  img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-                  title: 'Bike',
-                  author: '@southside_customs',
-                },
-                {
-                    img: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-1.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-2.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-3.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-4.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-5.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-6.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-7.jpg",
-                    title: "widelife",
-                    author: "@me"
-                },
-                {
-                    img: "https://swiperjs.com/demos/images/nature-8.jpg",
-                    title: "widelife",
-                    author: "@me"
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],
+              },
+              {
+                // img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+                img: 'https://images.unsplash.com/photo-1519671282429-b44660ead0a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'Foodie',
+                author: '@helloimnik',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/foodie',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+                title: 'Simpleton',
+                author: '@tjdragotta',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/Simpleton',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                // img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+                img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'Hotel Booking',
+                author: '@bkristastucchio',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/Beach-Resort',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                
+                // img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+                img: 'https://images.unsplash.com/photo-1543501527-49e855165f73?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'WebConnect',
+                author: '@katie_wasserman',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/WebCon',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                // img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+                img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'DJPapi',
+                author: '@silverdalex',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/DJPAPI',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+                title: 'Salon',
+                author: '@arwinneil',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/hairdressing',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              
+              {
+                // img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+                img: 'https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=2958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'Movie Hub',
+                author: '@nolanissac',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/MovieHub',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                // img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+                img: 'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                title: 'Pack App',
+                author: '@hjrc33',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/pack-app',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              },
+              {
+                // img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+                img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+                title: 'Simple Burger Builder',
+                author: '@shelleypauls',
+                description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
+                links: [
+                  {
+                  name: 'github',
+                  path:  'https://github.com/thurnye/Burger-Builder',
+                  icon: <FontAwesomeIcon icon={['fab', 'github']} />
+                },
+                  {
+                  name: 'site',
+                  path:  '',
+                  icon: <FontAwesomeIcon icon={['fas', 'globe']} />
+                }
+              ],
+              }
+                
+            ]
 
         },
         navs:[

@@ -96,6 +96,12 @@ const CompPortfolioGrid: FC<CompPortfolioGridProps> = (props: CompPortfolioGridP
         aria-controls={isOpen ? 'wrapped-menu' : undefined}
         aria-expanded={isOpen || undefined}
         aria-haspopup="menu"
+        sx={{cursor: 'pointer',
+          color: isOpen ? 'white' : 'inherit',
+          '&:hover': {
+            color: 'white'
+          }
+        }}
       >
         <CompFeatherIcon icon={<Grid/>}/>
       </TriggerButton>
