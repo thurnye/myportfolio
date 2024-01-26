@@ -19,19 +19,31 @@ export const PortfolioLayout = (t) => {
   }, []);
 
   useEffect(() => {
-    const phLayouts = [t('portfolio_layout_carousel'), t('portfolio_layout_masonry')];
+    const phLayouts = [{
+      label: t('portfolio_layout_masonry'),
+      name: 'Masonry'
+  }];
     switch (true) {
       case viewportWidth > 1200:
-        setPhotoLayout([...phLayouts,t('portfolio_layout_3columns'), t('portfolio_layout_4columns')])
+        setPhotoLayout([
+          ...phLayouts,
+          {label: t('portfolio_layout_3columns'), name: 'Column', num: 3}, 
+          {label: t('portfolio_layout_4columns'), name: 'Column', num : 1}
+        ])
         break;
       case viewportWidth < 1000:
-        setPhotoLayout([...phLayouts,t('portfolio_layout_1column'), t('portfolio_layout_2columns')])
-        break;
-      case viewportWidth < 1024:
-        setPhotoLayout([...phLayouts,t('portfolio_layout_1column'), t('portfolio_layout_2columns')])
+        setPhotoLayout([
+          ...phLayouts,
+          {label: t('portfolio_layout_1column'), name: 'Column', num: 1},
+          {label: t('portfolio_layout_2columns'), name: 'Column', num: 2},
+          ])
         break;
       case viewportWidth < 1200:
-        setPhotoLayout([...phLayouts,t('portfolio_layout_2columns'), t('portfolio_layout_3columns')])
+        setPhotoLayout([
+          ...phLayouts,
+          {label: t('portfolio_layout_2columns'), name: 'Column', num: 2},
+          {label: t('portfolio_layout_3columns'), name: 'Column', num: 3}
+        ])
         break;
     
       default:

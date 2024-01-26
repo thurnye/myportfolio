@@ -100,7 +100,7 @@ export const useDataCustomHook = () => {
                 },
                 {
                     name: 'Asp.Net',
-                    icon: <i class="devicon-dotnetcore-plain"></i>,
+                    icon: <i className="devicon-dotnetcore-plain"></i>,
                     isInProgress: true,
                     percentage: 70
                 },
@@ -112,13 +112,13 @@ export const useDataCustomHook = () => {
                 },
                 {
                     name: 'AWS',
-                    icon: <i class="devicon-amazonwebservices-original"></i>,
+                    icon: <i className="devicon-amazonwebservices-original"></i>,
                     isInProgress: true,
                     percentage: 20
                 },
                 {
                     name: 'C#',
-                    icon: <i class="devicon-csharp-plain"></i>,
+                    icon: <i className="devicon-csharp-plain"></i>,
                     isInProgress: true,
                     percentage: 70
                 },
@@ -130,19 +130,19 @@ export const useDataCustomHook = () => {
                 },
                 {
                     name: 'Webpack',
-                    icon: <i class="devicon-webpack-plain"></i>,
+                    icon: <i className="devicon-webpack-plain"></i>,
                     isInProgress: false,
                     percentage: 0
                 },
                 {
                     name: 'TypeScript',
-                    icon: <i class="devicon-typescript-plain"></i>,
+                    icon: <i className="devicon-typescript-plain"></i>,
                     isInProgress: false,
                     percentage: 0
                 },
                 {
                     name: 'StoryBook',
-                    icon: <i class="devicon-storybook-plain"></i>,
+                    icon: <i className="devicon-storybook-plain"></i>,
                     isInProgress: false,
                     percentage: 0
                 },
@@ -267,10 +267,12 @@ export const useDataCustomHook = () => {
                   data: [
                     {
                       name: t('email'),
+                      isLink: false,
                       value: 'danthurnye@gmail.com'
                     },
                     {
                       name: t('linkedIn'),
+                      isLink: true,
                       value: 'https://www.linkedin.com/in/danieltonyegudi/'
                     }
                   ]
@@ -280,10 +282,12 @@ export const useDataCustomHook = () => {
                   data: [
                     {
                       name: t('support'),
+                      isLink: false,
                       value: 'danthurnye@gmail.com'
                     },
                     {
                       name: t('phone'),
+                      isLink: false,
                       value: '+1(416)-843-6683'
                     }
                   ]
@@ -306,30 +310,175 @@ export const useDataCustomHook = () => {
             filters:[
                 {
                   name: t('portfolio_filter_all'),
-                  layouts: [t('portfolio_layout_grid')],
-                  label: 'all'
+                  label: 'all',
+                  layouts: [
+                    {
+                        label: t('portfolio_layout_grid'),
+                        name: 'Grid'
+                    }
+                    ]
                 },
                 {
                   name: t('portfolio_filter_webDesign'),
-                  layouts: [t('portfolio_layout_column'),t('portfolio_layout_thumbnail')],
-                  label: 'web'
+                  label: 'web',
+                  layouts: [
+                    {
+                        label: t('portfolio_layout_column'),
+                        name: 'Column'
+                    },
+                    {
+                        label: t('portfolio_layout_thumbnail'),
+                        name: 'Thumbnail'
+                    }
+                    ]
                 },
                 {
-                  name: t('portfolio_filter_uiElement'),
-                  layouts: [t('portfolio_layout_gallery'), t('portfolio_layout_masonry')],
-                  label: 'ui'
+                    name: t('portfolio_filter_uiElement'),
+                    label: 'ui',
+                    layouts: [
+                        {
+                            label: t('portfolio_layout_gallery'),
+                            name: 'Gallery'
+                        },
+                        {
+                            label: t('portfolio_layout_masonry'),
+                            name: 'Masonry'
+                        }
+                    ],
                 },
                 {
                   name: t('portfolio_filter_photo'),
-                  layouts: PortfolioLayout(t),
+                  layouts: [
+                    {
+                      label: t('portfolio_layout_masonry'),
+                      name: 'Masonry'
+                      }, 
+                    {
+                      label: t('portfolio_layout_column'),
+                      name: 'Column'
+                    }
+                  ],
                   label: 'photo'
                 }
             ],
             defaultFilter: {
                 name: t('portfolio_filter_all'),
-                layouts: t('portfolio_layout_grid'),
+                layouts: 
+                    {
+                        label: t('portfolio_layout_grid'),
+                        name: 'Grid'
+                    },
                 label: 'all'
-              },
+            },
+            projectList: [
+                {
+                  img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+                  title: 'Breakfast',
+                  author: '@bkristastucchio',
+                  featured: true,
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+                  title: 'Burger',
+                  author: '@rollelflex_graphy726',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+                  title: 'Camera',
+                  author: '@helloimnik',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+                  title: 'Coffee',
+                  author: '@nolanissac',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+                  title: 'Hats',
+                  author: '@hjrc33',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+                  title: 'Honey',
+                  author: '@arwinneil',
+                  featured: true,
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+                  title: 'Basketball',
+                  author: '@tjdragotta',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+                  title: 'Fern',
+                  author: '@katie_wasserman',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+                  title: 'Mushrooms',
+                  author: '@silverdalex',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+                  title: 'Tomato basil',
+                  author: '@shelleypauls',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+                  title: 'Sea star',
+                  author: '@peterlaster',
+                },
+                {
+                  img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+                  title: 'Bike',
+                  author: '@southside_customs',
+                },
+                {
+                    img: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-1.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-2.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-3.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-4.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-5.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-6.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-7.jpg",
+                    title: "widelife",
+                    author: "@me"
+                },
+                {
+                    img: "https://swiperjs.com/demos/images/nature-8.jpg",
+                    title: "widelife",
+                    author: "@me"
+                }
+              ],
 
         },
         navs:[

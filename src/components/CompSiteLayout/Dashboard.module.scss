@@ -9,6 +9,7 @@
 
     .contentContainer{
         background-image: linear-gradient(180deg,rgba(30,30,40,.93) 0%,rgba(30,30,40,.96) 70%,rgba(30,30,40,.99) 80%,#1e1e28 100%);
+        height: 'inherit';
         & .MuiDrawer-paper{
             background: $folio-color-backgroundPrimary !important;
         }

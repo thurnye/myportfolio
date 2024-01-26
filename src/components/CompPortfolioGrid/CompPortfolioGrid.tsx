@@ -8,10 +8,10 @@ import { ListActionTypes } from '@mui/base/useList';
 import styles from './CompPortfolioGrid.module.scss';
 import CompFeatherIcon from '../CompFeatherIcon/CompFeatherIcon';
 import { Grid } from 'react-feather';
-import { PFLinks } from '../../pages/Portfolio/Portfolio';
+import { PFLinks, LayoutProps } from '../../pages/Portfolio/Portfolio';
 
 interface CompPortfolioGridProps {
-  setStructure: (layout: string) => void;
+  setStructure: (layout: {label: string, layout: LayoutProps}) => void;
   nav: PFLinks[]
 };
 
@@ -74,7 +74,7 @@ const CompPortfolioGrid: FC<CompPortfolioGridProps> = (props: CompPortfolioGridP
   };
 
 
-  const createHandleMenuClick = (menuItem: string) => {
+  const createHandleMenuClick = (menuItem: {label: string, layout: LayoutProps}) => {
     return () => {
       setStructure(menuItem);
       setOpen(false);
@@ -111,11 +111,11 @@ const CompPortfolioGrid: FC<CompPortfolioGridProps> = (props: CompPortfolioGridP
         slotProps={{ listbox: { id: 'simple-menu' } }}
       >
         {nav.map((el: PFLinks, i: number) => <MenuSection label={el.name} key={`${el.name}_${i}`}>
-          {el.layouts.map((layout: string, j: number) => 
+          {el.layouts.map((layout: LayoutProps, j: number) => 
             <StyledMenuItem
-            key={`${el.label}_${layout}_${j}`}
-            onClick={createHandleMenuClick(`${el.label}_${layout}`)}>
-              {layout}
+            key={`${el.label}_${layout.name}_${j}`}
+            onClick={createHandleMenuClick({label: el.label, layout})}>
+              {layout.label}
             </StyledMenuItem>
           )}
         </MenuSection>)}

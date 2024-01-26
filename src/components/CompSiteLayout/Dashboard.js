@@ -113,7 +113,7 @@ function Dashboard() {
         flexGrow: 1,  
         pt: 0,
         maxHeight: 1440,
-        height: '97vh',
+        height: '97vh', //set this height for every page equal to this or lesser
         overflow: 'auto',
       }}
       className={styles.mainContainer}

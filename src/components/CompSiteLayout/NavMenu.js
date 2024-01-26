@@ -71,7 +71,7 @@ const NavMenu = ({open, setOpen, isMobile}) => {
                     alignItems: 'center',
                     flexDirection: 'column'
                   }}>
-                    {translations.map((el, i) => <Avatar sx={{ 
+                    {translations.map((el, i) => <Avatar  key={el.label} sx={{ 
                       cursor: 'pointer',
                       background: lang === el.label ? '#FFC107' : '#1E1E28',
                       color: lang === el.label ? 'black' : '#8C8C8E',
