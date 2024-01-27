@@ -52,6 +52,8 @@ const Portfolio: FC<PortfolioProps> = () => {
 
   };
 
+  
+
   return (
   <Box className={styles.Portfolio} data-testid="Portfolio" sx={{
     height: {xs: 'initial', lg: '92.8vh'},
@@ -102,7 +104,7 @@ const Portfolio: FC<PortfolioProps> = () => {
       <Typography sx={{fontSize: '10px'}}>{layout.label}</Typography>
     </Box>
 
-    <Box sx={{mt: 2, height: '86%', overflow: 'auto'}}>
+    <Box sx={{mt: 2, height: '85%', overflow: 'auto', pb: 4}}>
       <CompGalleryLayout layout={layout} />
     </Box>
   </Box>

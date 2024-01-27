@@ -4,34 +4,15 @@ import Grid from '@mui/material/Grid';
 
 import CardMedia from '@mui/material/CardMedia';
 import styles from './CompBrands.module.scss';
-import brand1 from '../../../../public/images/brand-1.png'
-import brand2 from '../../../../public/images/brand-2.png'
-import brand3 from '../../../../public/images/brand-3.png'
+import { useDataCustomHook } from '../../../../Data/data';
+
 
 
 interface CompBrandsProps {}
 
 const CompBrands: FC<CompBrandsProps> = () => {
-
-  const brands = [
-    {
-      name: 'brand1',
-      brand: brand1
-    },
-    {
-      name: 'brand2',
-      brand: brand2
-    },
-    {
-      name: 'brand3',
-      brand: brand3
-    },
-    {
-      name: 'brand4',
-      brand: brand3
-    }
-  ]
-
+  const {homePage: {brands}} = useDataCustomHook();
+  
   return(
     <div className={styles.CompBrands} data-testid="CompBrands">
       <Box sx={{ flexGrow: 1 }}>

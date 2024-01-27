@@ -64,5 +64,7 @@
     "portfolio_layout_1column": "1 Colonne",
     "portfolio_layout_2columns": "2 Colonnes",
     "portfolio_layout_3columns": "3 Colonnes",
-    "portfolio_layout_4columns": "4 Colonnes"
+    "portfolio_layout_4columns": "4 Colonnes",
+    "unknown_page_header" : "La page que vous avez demandée est introuvable",
+    "unknown_page_sub_header" : "J'ai cherché haut et bas, mais je n'ai pas trouvé ce que vous cherchiez. Laissez-moi vous trouver un meilleur endroit où aller."
 }

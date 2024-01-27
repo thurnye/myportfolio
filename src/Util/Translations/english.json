@@ -64,5 +64,7 @@
     "portfolio_layout_1column": "1 Column",
     "portfolio_layout_2columns": "2 Columns",
     "portfolio_layout_3columns": "3 Columns",
-    "portfolio_layout_4columns": "4 Columns"
+    "portfolio_layout_4columns": "4 Columns",
+    "unknown_page_header" : "The Page You Requested Could Not Be Found",
+    "unknown_page_sub_header" : "I've searched high and low but couldn’t find what you’re looking for. Let’s me find a better place for you to go."
 }

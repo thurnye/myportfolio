@@ -27,6 +27,7 @@ const CompGalleryLayout: FC<CompGalleryLayoutProps> = ({layout, num}) => {
   const [isHovered, setIsHovered] = useState<string|undefined>();
   const [isSlide, setIsSlide] = React.useState<{name: string, open: boolean}>({name: '', open: false});
   
+  console.log(layout.name)
   
   return(
   <div className={styles.CompGalleryLayout} data-testid="CompGalleryLayout">
@@ -43,6 +44,7 @@ const CompGalleryLayout: FC<CompGalleryLayoutProps> = ({layout, num}) => {
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     alt={item.title}
                     loading="lazy"
+                    height={254}
                   />
                   <ImageListItemBar
                     title={item.title}

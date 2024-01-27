@@ -42,6 +42,7 @@ function Dashboard() {
   return (
     <Box  sx={{display : 'flex', mt: 2}}>
       <CssBaseline />
+      {/* Mobile screen menu */}
       <Box  sx={{
           display:{xs: 'block', md: 'none'},
           width: '100%',
@@ -55,7 +56,7 @@ function Dashboard() {
       </Box>
       <Box>
       </Box>
-
+{/* Side Drawer */}
       <Box
         component="nav"
         sx={{ 
@@ -107,6 +108,8 @@ function Dashboard() {
           <Info/>
         </Drawer>
       </Box>
+
+{/* Main contents */}
       <Box
       component="main"
       sx={{ 
@@ -126,6 +129,7 @@ function Dashboard() {
             <CompFooter/>
         </Box>
       </Box>
+      {/* Menu Drawer */}
       <Box>
         <MenuDrawer setOpenMiniMobile={setOpenMiniMobile} openMiniMobile={openMiniMobile} backgroundColor={sub}/>
       </Box>

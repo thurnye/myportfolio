@@ -1,9 +1,21 @@
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import bitAvatar from '../public/images/bitMoji/mainAvatar.png'
-import avatar from '../public/images/me.jpeg'
-import { PortfolioLayout } from './PortfolioLayout';
-
+import bitAvatar from '../assets/images/bitMoji/mainAvatar.png'
+import avatar from '../assets/images/me.jpeg'
+import brand1 from '../assets/images/brands/brand-1.png';
+import brand2 from '../assets/images/brands/brand-2.png';
+import brand3 from '../assets/images/brands/brand-3.png';
+import booking from '../assets/images/projects/booking.avif'
+import cartopia from '../assets/images/projects/cartopia.avif'
+import djPapi from '../assets/images/projects/djPapi.avif'
+import foodie from '../assets/images/projects/foodie.avif'
+import movieHub from '../assets/images/projects/movieHub.avif'
+import packdApp from '../assets/images/projects/packdApp.avif'
+import salon from '../assets/images/projects/salon.avif'
+import weConnect from '../assets/images/projects/we-connect.avif'
+import simpleBurger from '../assets/images/projects/simpleBurger.jpeg'
+import simpleton from '../assets/images/projects/simpleton.jpeg'
+import pageNotFound from '../assets/images/errors/pageNotFound.png'
 
 export const useDataCustomHook = () => {
     const {t} = useTranslation();
@@ -250,10 +262,23 @@ export const useDataCustomHook = () => {
                   stars: 5
                 },
             ],
-            brandLogos: [
-                '../public/images/brand-1.png',
-                '../public/images/brand-2.png',
-                '../public/images/brand-3.png',
+            brands : [
+              {
+                name: 'brand1',
+                brand: brand1
+              },
+              {
+                name: 'brand2',
+                brand: brand2
+              },
+              {
+                name: 'brand3',
+                brand: brand3
+              },
+              {
+                name: 'brand4',
+                brand: brand3
+              }
             ]
 
         },
@@ -313,9 +338,9 @@ export const useDataCustomHook = () => {
                   label: 'all',
                   layouts: [
                     {
-                        label: t('portfolio_layout_grid'),
-                        name: 'Grid'
-                    }
+                      label: t('portfolio_layout_gallery'),
+                      name: 'Gallery'
+                  },
                     ]
                 },
                 {
@@ -337,9 +362,9 @@ export const useDataCustomHook = () => {
                     label: 'ui',
                     layouts: [
                         {
-                            label: t('portfolio_layout_gallery'),
-                            name: 'Gallery'
-                        },
+                          label: t('portfolio_layout_grid'),
+                          name: 'Grid'
+                      },
                         {
                             label: t('portfolio_layout_masonry'),
                             name: 'Masonry'
@@ -364,16 +389,17 @@ export const useDataCustomHook = () => {
             defaultFilter: {
                 name: t('portfolio_filter_all'),
                 layouts: 
-                    {
-                        label: t('portfolio_layout_grid'),
-                        name: 'Grid'
-                    },
+                {
+                  label: t('portfolio_layout_gallery'),
+                  name: 'Gallery'
+              },
                 label: 'all'
             },
             projectList: [
               {
                 // img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-                img: 'https://images.unsplash.com/photo-1627634777217-c864268db30c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1627634777217-c864268db30c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: cartopia,
                 title: 'Cartopia',
                 author: '@rollelflex_graphy726',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -392,7 +418,8 @@ export const useDataCustomHook = () => {
               },
               {
                 // img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-                img: 'https://images.unsplash.com/photo-1519671282429-b44660ead0a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1519671282429-b44660ead0a7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: foodie,
                 title: 'Foodie',
                 author: '@helloimnik',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -410,7 +437,8 @@ export const useDataCustomHook = () => {
               ],
               },
               {
-                img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+                // img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+                img: simpleton,
                 title: 'Simpleton',
                 author: '@tjdragotta',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -429,7 +457,8 @@ export const useDataCustomHook = () => {
               },
               {
                 // img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-                img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: booking,
                 title: 'Hotel Booking',
                 author: '@bkristastucchio',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -449,8 +478,9 @@ export const useDataCustomHook = () => {
               {
                 
                 // img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-                img: 'https://images.unsplash.com/photo-1543501527-49e855165f73?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                title: 'WebConnect',
+                // img: 'https://images.unsplash.com/photo-1543501527-49e855165f73?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: weConnect,
+                title: 'We-Connect',
                 author: '@katie_wasserman',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
                 links: [
@@ -468,7 +498,8 @@ export const useDataCustomHook = () => {
               },
               {
                 // img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-                img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: djPapi,
                 title: 'DJPapi',
                 author: '@silverdalex',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -480,14 +511,15 @@ export const useDataCustomHook = () => {
                 },
                   {
                   name: 'site',
-                  path:  '',
+                  path:  'https://callmedjpapi.com/',
                   icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],
               },
               {
-                img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 // img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+                img: salon,
                 title: 'Salon',
                 author: '@arwinneil',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -504,10 +536,10 @@ export const useDataCustomHook = () => {
                 }
               ],
               },
-              
               {
                 // img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-                img: 'https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=2958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=2958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: movieHub,
                 title: 'Movie Hub',
                 author: '@nolanissac',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -526,7 +558,8 @@ export const useDataCustomHook = () => {
               },
               {
                 // img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-                img: 'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // img: 'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                img: packdApp,
                 title: 'Pack App',
                 author: '@hjrc33',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -545,7 +578,8 @@ export const useDataCustomHook = () => {
               },
               {
                 // img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-                img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+                // img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+                img: simpleBurger,
                 title: 'Simple Burger Builder',
                 author: '@shelleypauls',
                 description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.',
@@ -562,9 +596,14 @@ export const useDataCustomHook = () => {
                 }
               ],
               }
-                
             ]
 
+        },
+        noMatchPage: {
+          header: t('unknown_page_header'),
+          subHeader: t('unknown_page_sub_header'),
+          buttonText: '',
+          bgImg : pageNotFound
         },
         navs:[
             { "id": 0, 
