@@ -1,14 +1,17 @@
 import React, { FC } from 'react';
+import {Link} from 'react-router-dom';
 import styles from './NoMatch.module.scss';
 import Box from '@mui/material/Box';
 import { useDataCustomHook } from '../../Data/data';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
+import Button from '@mui/material/Button';
+
 
 interface NoMatchProps {}
 
 const NoMatch: FC<NoMatchProps> = () => {
-  const {noMatchPage: {bgImg, header, subHeader}} = useDataCustomHook();
+  const {noMatchPage: {bgImg, header, subHeader, buttonText}} = useDataCustomHook();
   
   return(
   <Box className={styles.NoMatch} data-testid="NoMatch" sx={{
@@ -45,6 +48,26 @@ const NoMatch: FC<NoMatchProps> = () => {
           <Typography variant="body1" gutterBottom sx={{mt: 2, maxWidth: 490, color: '#8c8c8e'}}>
               {subHeader}
             </Typography>
+          
+            <Button variant="contained" disableElevation sx={{
+              mt: 2,
+              width: '50%', 
+              background: '#FED65A', 
+              color: '#E5640D',
+              fontWeight: '700',
+              '&:hover':{
+                background: '#FED65A', 
+                color: '#E5640D'
+              }
+          }}>
+             <Link to="home" style={{
+              textDecoration: 'none',
+              width: 'inherit',
+              color: 'inherit'
+             }}>
+                {buttonText}
+              </Link> 
+            </Button>
         </Box>
 
     </Card>

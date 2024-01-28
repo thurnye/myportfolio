@@ -602,7 +602,7 @@ export const useDataCustomHook = () => {
         noMatchPage: {
           header: t('unknown_page_header'),
           subHeader: t('unknown_page_sub_header'),
-          buttonText: '',
+          buttonText: t('home'),
           bgImg : pageNotFound
         },
         navs:[
