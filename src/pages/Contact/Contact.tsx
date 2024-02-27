@@ -5,11 +5,15 @@ import styles from './Contact.module.scss';
 import {Link, Card, CardContent, Typography } from '@mui/material';
 import CompContactForm from '../../components/CompContactForm/CompContactForm';
 import { useDataCustomHook } from '../../Data/data';
+import { Notify } from '../../components/CompNotification/CompNotification';
 
 
-interface ContactProps {}
+interface ContactProps {
+  setNotify: (msg: Notify) => void;
+  setOpen: (open: boolean) => void;
+}
 
-const Contact: FC<ContactProps> = () => {
+const Contact: FC<ContactProps> = (props: ContactProps) => {
   const {contactPage: {header, info, formHeader}} = useDataCustomHook();
 
   return(
@@ -48,7 +52,7 @@ const Contact: FC<ContactProps> = () => {
         <Typography variant='h6' color="text.secondary" gutterBottom className={styles.contactInfo}>
           {formHeader}
         </Typography>
-        <CompContactForm/>
+        <CompContactForm setOpen={props.setOpen} setNotify={props.setNotify}/>
       </Box>
     </Box>
   )

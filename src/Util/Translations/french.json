@@ -66,5 +66,8 @@
     "portfolio_layout_3columns": "3 Colonnes",
     "portfolio_layout_4columns": "4 Colonnes",
     "unknown_page_header" : "La page que vous avez demandée est introuvable",
-    "unknown_page_sub_header" : "J'ai cherché haut et bas, mais je n'ai pas trouvé ce que vous cherchiez. Laissez-moi vous trouver un meilleur endroit où aller."
+    "unknown_page_sub_header" : "J'ai cherché haut et bas, mais je n'ai pas trouvé ce que vous cherchiez. Laissez-moi vous trouver un meilleur endroit où aller.",
+    "message_sent_success": "Message envoyé avec succès !.",
+    "mesage_sent_failed": "Le message n'a pas pu être envoyé !.",
+    "site_alert": "Veuillez noter que le site est encore en développement car certains textes/fonctionnalités sont manquants !."
 }

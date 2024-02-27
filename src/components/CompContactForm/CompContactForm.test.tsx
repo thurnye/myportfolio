@@ -5,7 +5,7 @@ import CompContactForm from './CompContactForm';
 
 describe('<CompContactForm />', () => {
   test('it should mount', () => {
-    render(<CompContactForm />);
+    render(<CompContactForm setNotify={(data) => data} setOpen={(open) => open}/>);
     
     const compContactForm = screen.getByTestId('CompContactForm');
 

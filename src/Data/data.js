@@ -187,7 +187,7 @@ export const useDataCustomHook = () => {
                 },
                 {
                     name: 'download',
-                    link: 'https://docs.google.com/document/d/1RQxexr20rhBa_ZSb_L6q6FMxIodg-5gW3XMmYM4X0bI/edit?tab=t.0#heading=h.gjdgxs',
+                    link: 'https://1drv.ms/w/s!Aup-os93NevNhAyHgS-mrrRHDH74?e=lnirPT',
                     icon: <FontAwesomeIcon icon={['fas', 'download']} />
     
                 }

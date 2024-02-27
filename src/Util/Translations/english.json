@@ -66,5 +66,8 @@
     "portfolio_layout_3columns": "3 Columns",
     "portfolio_layout_4columns": "4 Columns",
     "unknown_page_header" : "The Page You Requested Could Not Be Found",
-    "unknown_page_sub_header" : "I've searched high and low but couldn’t find what you’re looking for. Let’s me find a better place for you to go."
+    "unknown_page_sub_header" : "I've searched high and low but couldn’t find what you’re looking for. Let’s me find a better place for you to go.",
+    "message_sent_success": "Message sent successfully!.",
+    "mesage_sent_failed": "Message failed to send!.",
+    "site_alert": "Please note that the site is still under development as the some text/features are missing!."
 }

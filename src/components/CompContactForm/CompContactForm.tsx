@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC, useMemo, useState } from 'react';
 import styles from './CompContactForm.module.scss';
 import * as yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -9,8 +9,13 @@ import { styled } from '@material-ui/core/styles';
 import { useTranslation } from "react-i18next";
 import { useDataCustomHook } from '../../Data/data';
 import CompFeatherIcon from '../CompFeatherIcon/CompFeatherIcon';
+import emailjs from "@emailjs/browser"
+import { Notify } from '../CompNotification/CompNotification';
 
-interface CompContactFormProps {}
+interface CompContactFormProps {
+  setOpen: (open: boolean) => void;
+  setNotify: (msg: Notify) => void;
+}
 
 export interface ICreateContactForm {
   name: string;
@@ -50,9 +55,16 @@ const CustomTextField = styled(TextField)({
   },
 });
 
-const CompContactForm: FC<CompContactFormProps> = () => {
+const serviceKey = process.env.REACT_APP_EMAILJS_KEY;
+const templateKey = process.env.REACT_APP_EMAILJS_TEMPLATE_KEY;
+
+const CompContactForm: FC<CompContactFormProps> = (props: CompContactFormProps) => {
+  const {setOpen, setNotify} = props;
   const {t} = useTranslation();
   const {contactPage: {fields}} = useDataCustomHook();
+  const [loading, setLoading] = useState<boolean>(false)
+
+  React.useEffect(() => emailjs.init("ieWSSQZFSVCBkZqmJ"), []);
 
   const createFormValidationSchema = useMemo(
     () => yup.object({
@@ -74,9 +86,36 @@ const CompContactForm: FC<CompContactFormProps> = () => {
 
 
   const onSubmit: SubmitHandler<ICreateContactForm> = (data: ICreateContactForm) => {
-    console.log(data)
-    clearErrors()
+    setLoading(true)
+    clearErrors();
+    handleSubmitMail(data)
     reset();
+  };
+  const handleSubmitMail = async (data:{name: string, email:string, message:string}) => {
+    
+    const serviceId = serviceKey as string;
+    const templateId = templateKey as string;
+    try {
+      await emailjs.send(serviceId, templateId, {
+        name: data.name,
+        email: data.email,
+        message: data.message
+      });
+      setOpen(true)
+      setNotify({
+        message: t('message_sent_success'),
+        severity: 'success'
+      })
+        reset()
+    } catch (error) {
+      setNotify({
+        message:t('message_sent_failed'),
+        severity: 'error'
+      })
+      
+    } finally {
+      setLoading(false);
+    }
   };
   
   return (

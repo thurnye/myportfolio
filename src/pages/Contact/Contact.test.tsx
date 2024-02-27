@@ -5,7 +5,7 @@ import Contact from './Contact';
 
 describe('<Contact />', () => {
   test('it should mount', () => {
-    render(<Contact />);
+    render(<Contact setNotify={(data) => data} setOpen={(open) => open}/>);
     
     const contact = screen.getByTestId('Contact');
 
