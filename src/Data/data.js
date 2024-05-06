@@ -426,12 +426,12 @@ export const useDataCustomHook = () => {
                 links: [
                   {
                   name: 'github',
-                  path:  'https://github.com/thurnye/foodie',
+                  path:  'https://github.com/thurnye/Foodie_FrontEnd.git',
                   icon: <FontAwesomeIcon icon={['fab', 'github']} />
                 },
                   {
                   name: 'site',
-                  path:  '',
+                  path:  'https://foodie-frontend-z89c.onrender.com',
                   icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],
@@ -450,7 +450,7 @@ export const useDataCustomHook = () => {
                 },
                   {
                   name: 'site',
-                  path:  '',
+                  path:  'https://simpleton.onrender.com',
                   icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],
@@ -491,7 +491,7 @@ export const useDataCustomHook = () => {
                 },
                   {
                   name: 'site',
-                  path:  '',
+                  path:  'https://webcon.onrender.com',
                   icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],
@@ -531,7 +531,7 @@ export const useDataCustomHook = () => {
                 },
                   {
                   name: 'site',
-                  path:  '',
+                  path:  'https://hairdressing.onrender.com',
                   icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],
@@ -591,7 +591,7 @@ export const useDataCustomHook = () => {
                 },
                   {
                   name: 'site',
-                  path:  '',
+                  path:  'https://burger-builder-nhlo.onrender.com',
                   icon: <FontAwesomeIcon icon={['fas', 'globe']} />
                 }
               ],

@@ -26,33 +26,16 @@ const CompNotification: FC<CompNotificationProps> = (props: CompNotificationProp
       }
   
       setOpen(!open);
+      setNotify({message: '', severity: 'success'})
     };
 
   return (
     <Box sx={{ width: 500 }}>
-      {/* <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={open}
-        onClose={() => {
-            setOpen(!open);
-            setNotify('')
-         }}
-      >
-         <Alert
-    onClose={handleClose}
-    severity={severity}
-    variant="filled"
-    sx={{ width: '100%' }}
-  >
-    {notify.message}
-  </Alert>
-      </Snackbar> */}
-
       <Snackbar 
       open={open} 
       autoHideDuration={6000} 
       onClose={handleClose} 
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >
         <Alert
           onClose={handleClose}
