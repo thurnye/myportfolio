@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs "nodejs-22.1.0"
-    }
+   
 
     stages {
         stage('Check npm Installation') {   
