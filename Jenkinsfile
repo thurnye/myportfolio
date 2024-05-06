@@ -16,7 +16,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'cp -r ./build/ /var/www/danthurnye.com/html
+                sh 'cp -r ./build/ /var/www/danthurnye.com/html'
             }
         }
     }
