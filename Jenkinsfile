@@ -1,22 +1,7 @@
 pipeline {
     agent any
 
-   
-
     stages {
-        stage('Check npm Installation') {   
-            steps {
-                sh '''
-                    if ! command -v npm &> /dev/null
-                    then
-                        echo "npm not found. Installing..."
-                        sudo apt-get update
-                        sudo apt-get install npm
-                    fi
-                '''
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
@@ -31,8 +16,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Deployment with rsync
-                sh 'cp -r ./build/ /var/www/danthurnye.com/html'
+                sh 'cp -r ./build/ /var/www/danthurnye.com/html
             }
         }
     }
