@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b73164a5.css",
+    "main.js": "/static/js/main.11cd6ff3.js",
+    "static/js/787.2516fd64.chunk.js": "/static/js/787.2516fd64.chunk.js",
+    "static/media/simpleton.jpeg": "/static/media/simpleton.cee7c9176e0a2e6d05d6.jpeg",
+    "static/media/simpleBurger.jpeg": "/static/media/simpleBurger.b2d158f0683408822e70.jpeg",
+    "static/media/booking.avif": "/static/media/booking.76a9b7c7ad3a6815714e.avif",
+    "static/media/foodie.avif": "/static/media/foodie.5b019b63f10225cadb31.avif",
+    "static/media/salon.avif": "/static/media/salon.cdd47feece7eb72be90f.avif",
+    "static/media/pageNotFound.png": "/static/media/pageNotFound.bb2c1a5d2656c515d867.png",
+    "static/media/packdApp.avif": "/static/media/packdApp.7d1554154baaade2b933.avif",
+    "static/media/mainAvatar.png": "/static/media/mainAvatar.8de5dabb0f777693bbd9.png",
+    "static/media/cartopia.avif": "/static/media/cartopia.20b6257e5e3527b4fb3f.avif",
+    "static/media/we-connect.avif": "/static/media/we-connect.75087a2ce11d45efc5e2.avif",
+    "static/media/bg.jpeg": "/static/media/bg.e4c09b827c2805dbc099.jpeg",
+    "static/media/me.jpeg": "/static/media/me.7c3d708cdd532c95a55c.jpeg",
+    "static/media/djPapi.avif": "/static/media/djPapi.b3e2fd61fc7aa26b149c.avif",
+    "static/media/movieHub.avif": "/static/media/movieHub.0976db6f11a53861b645.avif",
+    "static/media/brand-1.png": "/static/media/brand-1.ceb46490b2d8c136c819.png",
+    "static/media/brand-2.png": "/static/media/brand-2.30e9ba9e83463bfb698f.png",
+    "static/media/brand-3.png": "/static/media/brand-3.b5b57a0401c983312ad9.png",
+    "index.html": "/index.html",
+    "main.b73164a5.css.map": "/static/css/main.b73164a5.css.map",
+    "main.11cd6ff3.js.map": "/static/js/main.11cd6ff3.js.map",
+    "787.2516fd64.chunk.js.map": "/static/js/787.2516fd64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b73164a5.css",
+    "static/js/main.11cd6ff3.js"
+  ]
+}
